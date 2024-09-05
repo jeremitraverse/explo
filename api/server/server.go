@@ -17,6 +17,7 @@ func Start() {
 	http.HandleFunc("/posts", posts.GetPostsHandler)
 	http.HandleFunc("/post", posts.GetPostHandler)
 	http.HandleFunc("/update-post", posts.UpdatePostHandler)
+	http.HandleFunc("/delete-post", posts.DeletePostHandler)
 
 	http.ListenAndServe(":8080", nil)
 }

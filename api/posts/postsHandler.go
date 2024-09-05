@@ -25,6 +25,8 @@ func CreatePostHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	CreatePost(post)
+
+	w.WriteHeader(http.StatusCreated)
 }
 
 func GetPostsHandler(w http.ResponseWriter, r *http.Request) {
@@ -93,8 +95,6 @@ func DeletePostHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Internal server error", http.StatusInternalServerError)
 		return
 	}
-
-	// TODO: Create json response with success
 }
 
 func UpdatePostHandler(w http.ResponseWriter, r *http.Request) {
@@ -122,7 +122,6 @@ func UpdatePostHandler(w http.ResponseWriter, r *http.Request) {
 		createBadRequest(w, err.Error())
 		return
 	}
-
 }
 
 func createBadRequest(w http.ResponseWriter, errorMessage string) {
