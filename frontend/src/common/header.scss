@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    
+    .actions-container {
+        display: flex;
+        font-weight: 600;
+        font-size: 0.9rem;
+
+        #exit {
+            cursor: pointer;
+
+            > div {
+                padding: 10px 0px
+            }
+        }
+
+        #save {
+            cursor: pointer;
+            margin-right: 30px;
+
+            .not-active {
+                padding: 10px 15px;
+                background-color: #f2f2f2;
+                color: #c8c8c8;
+                border-radius: 3px;
+            }
+        }
+
+    }
+
+    .post-name-container {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.85rem;
+        font-weight: 500;
+        > div {
+            display: inline-block;
+            text-align: center;
+        }
+    }
+
+    .view-port-toggle-container {
+        display: flex;
+        
+        > div {
+            display: flex;
+            align-items: center;
+        }
+
+        .view-port-mobile {
+            margin-left: 20px;
+        }
+    }
+}
